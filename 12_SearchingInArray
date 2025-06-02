@@ -1,0 +1,42 @@
+#Searching
+""" we can search in array for a certain value and return index """
+
+#By using where() function
+
+import numpy as np 
+devu=np.array([1,2,3,3,4,5,6])
+devu1=np.where(devu==3)
+print(devu1)
+
+     # we can also give condition in it to find any number
+
+import numpy as np
+devu=np.array([2,3,4,5,4,45,67])
+devu1=np.where(devu%2==0)
+print(devu1)
+
+
+#By using searchsorted() function
+
+""" searchsorted() uses when array is in sorted order and we want to know where to insert value for ex-"""
+
+import numpy as np 
+devu=np.array([10,20,30,40,50])
+devu1=np.searchsorted(devu, 25)
+print(devu1)
+
+     #note - we can also select side of searching in it for ex-
+
+
+import numpy as np 
+devu=np.array([10,20,30,40,50])
+devu1=np.searchsorted(devu, 40 ,side='right')
+print(devu1)
+
+
+    #inserting or searching multiple values using searchsorted()
+
+import numpy as np 
+devu=np.array([1,3,5,7,7])
+devunew=np.searchsorted(devu, [2,3,6])
+print(devunew)
