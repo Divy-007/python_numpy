@@ -1,0 +1,65 @@
+#splitting arrays 
+
+#splitting 1-D arrays
+import numpy as np
+devu=np.array([1,2,3,4,5,6])
+devunew=np.array_split(devu , 3)
+print(devunew)
+
+#splitting 2-D arrays 
+import numpy as np 
+devu =np.array([[1,2],[3,4],[5,6],[7,8],[9,10]])
+devunew=np.array_split(devu,4)
+print(devunew)
+print(devunew[0])
+print(devunew[1])
+
+#splitting 2-D arrays along the column
+print("along the column")
+    #we can do this by two ways 
+
+      #1. using axis
+
+import numpy as np 
+devu =np.array([[1,2],[3,4],[5,6],[7,8],[9,10]])
+devunew=np.array_split(devu,2,axis=1)
+print(devunew)
+
+      #  2. using hsplit function
+
+import numpy as np 
+devu =np.array([[1,2],[3,4],[5,6],[7,8],[9,10]])
+devunew=np.hsplit(devu,2)
+print(devunew)
+
+#splitting 2-D array along the row
+   
+   #we can also do it by 2 ways 
+
+     #1. using axis
+
+import numpy as np 
+devu =np.array([[1,2],[3,4],[5,6],[7,8],[9,10]])
+devunew=np.array_split(devu,2,axis=0)
+print(devunew)
+      #2. using vsplit function
+import numpy as np 
+devu =np.array([[1,2],[3,4],[5,6],[7,8]])
+devunew=np.vsplit(devu,2)
+print(devunew)
+
+#splitting 3-D array 
+   
+   #1. using axis 
+
+import numpy as np 
+devu=np.array([[[1,2],[3,4]],[[5,6],[7,8]]])
+devunew=np.array_split(devu,2,axis=2)
+print(devunew)
+
+    #2. using dsplit function
+
+import numpy as np 
+devu=np.array([[[1,2],[3,4]],[[5,6],[7,8]]])
+devunew=np.dsplit(devu,2)
+print(devunew)
