@@ -18,3 +18,7 @@ import numpy as np
 arr=np.array([22,34,44,55,23,50,45,3,432,34,24,44,56])
 filter_arr=arr[arr%2==0]
 print(filter_arr)
+
+
+
+
